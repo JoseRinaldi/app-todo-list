@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'todo-input-add',
@@ -10,8 +10,8 @@ export class InputAddComponent {
 
   /* An empty array that is responsible
        to add a division */
-       @Input()
-       public items:string[] = [];
+       @Output()
+       public item : EventEmitter<string> = new EventEmitter() ;
 
        /* A two-way binding performed which
           pushes text on division */
@@ -21,12 +21,13 @@ export class InputAddComponent {
        /* When input is empty, it will
           not create a new division */
        public addToList():void {
-           if (this.newTask === '') {
-           }
-           else {
-               this.items.push(this.newTask);
-               this.newTask = '';
-           }
+
+        if (this.newTask.length === 0) return;
+
+        this.item.emit(this.newTask);
+
+        this.newTask = '';
+
        }
 
     //    public addToListEnter(value:string):void {
@@ -41,8 +42,8 @@ export class InputAddComponent {
     // }
        /* This function takes to input the
           task, that has to be deleted*/
-          public deleteTask(index:number) :void{
-            this.items.splice(index, 1);
-        }
+        //   public deleteTask(index:number) :void{
+        //     this.item.splice(index, 1);
+        // }
 
 }
