@@ -3,47 +3,9 @@
   <shader-navbar></shader-navbar>
 
   <!--Division for taking input from user -->
-  <div class="row mt-1" style="height:80px;">
-      <div class="col-3 d-none col-md-3 d-md-block"></div>
-      <div class="col-12 col-md-6 bg-success d-flex
-                  justify-content-center align-items-center
-                  text-light h3">
-
-                  <!-- (keyup.enter)="addToListEnter(txtnewTask.value)" -->
-                  <input [(ngModel)]="newTask"
-                  (keyup.enter)="addToList()"
-                  type="text"
-                  value="" class="col-7 form-control"
-                      style="width:300px;"
-                      #txtnewTask>
-
-          <div class="col-1"></div>
-
-          <button (click)="addToList()"
-              class="btn btn-light text-success">
-              ADD TASK
-          </button>
-      </div>
-
-      <div class="col-3 d-none col-md-3 d-md-block"></div>
-  </div>
+  <todo-input-add></todo-input-add>
+  <todo-task></todo-task>
 
   <!--Tasks added repeated divisions-->
-  <div *ngFor="let x of items; let index = index;"
-          class="row mt-1" style="height:100px;">
 
-      <div class="col-3 d-none col-md-3 d-md-block"></div>
-
-      <div class="col-12 col-md-6 bg-success d-flex
-                  justify-content-center align-items-center
-                  text-light h3">
-
-          <div class="col-9 text-light h3">{{x | titlecase}}</div>
-
-          <input (click)="deleteTask(index)" type="button"
-              value="Delete" class="col-2 btn btn-danger">
-      </div>
-
-      <div class="col-3 d-none col-md-3 d-md-block"></div>
-  </div>
 </div>
