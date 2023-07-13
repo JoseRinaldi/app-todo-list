@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Tarea } from '../../interfaces/tarea.interface';
 
 @Component({
   selector: 'todo-input-add',
@@ -40,10 +41,5 @@ export class InputAddComponent {
     //         this.newTask = '';
     //     }
     // }
-       /* This function takes to input the
-          task, that has to be deleted*/
-        //   public deleteTask(index:number) :void{
-        //     this.item.splice(index, 1);
-        // }
 
 }
