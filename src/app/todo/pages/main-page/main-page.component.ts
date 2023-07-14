@@ -1,3 +1,4 @@
+import { Tarea } from '../../interfaces/tarea.interface';
 import { TodoService } from './../../services/todo-service.service';
 import { Component } from '@angular/core';
 
@@ -21,10 +22,5 @@ export class MainPageComponent {
   onDeleteTarea( index: number ):void {
     this.todo.deleteTareaByIndex( index );
   }
-
-  // onMoveTarea(event: CdkDragDrop<string[]>):void{
-  //   this.todo.moveTarea(event)
-
-  // }
 
 }

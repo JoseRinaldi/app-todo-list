@@ -1,8 +1,5 @@
 <shader-navbar></shader-navbar>
 <todo-input-add (item)="onNewTarea($event)" ></todo-input-add>
-<todo-task>
-    [listTask]="tareas"
-    (onDelete)="onDeleteTarea($event)"
-</todo-task>
-
-  <!-- (onMove)="onMoveTarea($event)"> -->
+<todo-task
+[listTask]="tareas"
+      (onDelete)="onDeleteTarea($event)"></todo-task>

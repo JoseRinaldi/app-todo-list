@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ShaderModule } from '../shader/shader.module';
 import { TaskComponent } from './components/task/task.component';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 
@@ -14,14 +13,11 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     InputAddComponent,
     MainPageComponent,
     TaskComponent,
-
-
   ],
   imports: [
     CommonModule,
     FormsModule,
     ShaderModule,
-    DragDropModule
 
 
   ],

@@ -20,11 +20,4 @@ export class TodoService {
   deleteTareaByIndex(index:number){
     this.tareas.splice(index, 1);
   }
-
-  // moveTarea(event: CdkDragDrop<string[]>){
-  //   moveItemInArray(this.tareas, event.previousIndex, event.currentIndex);
-
-
-
-  // }
 }
