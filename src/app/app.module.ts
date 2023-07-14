@@ -6,6 +6,7 @@ import { TodoModule } from './todo/todo.module';
 import { ShaderModule } from './shader/shader.module';
 
 import { AppComponent } from './app.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     FormsModule,
     ShaderModule,
-    TodoModule
+    TodoModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

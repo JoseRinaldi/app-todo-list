@@ -1,0 +1,25 @@
+
+
+  <div *ngFor="let task of listTask; let index = index; "
+    class="row mt-1" style="height:100px;" >
+
+    <div class="col-3 d-none col-md-3 d-md-block" ></div>
+
+      <div class="col-12 col-md-6 bg-success d-flex
+          justify-content-center align-items-center
+          text-light h3" >
+
+          <div class="col-9 text-light h3"> {{task | titlecase}}</div>
+
+          <input (click)="onDeleteCharacter(index)" type="button"
+          value="Delete" class="col-2 btn btn-danger">
+
+
+      </div>
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+
+  </div>
+
+<!-- <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div> -->
+
